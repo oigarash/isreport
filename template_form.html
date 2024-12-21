@@ -1,0 +1,292 @@
+
+<!DOCTYPE html><html>
+<head>
+	<meta charset="utf-8"/>	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+	<title>報告書：マニュアル作成研修（2024年12月開催）（2024/12/20）</title>
+	<link href="/favicon.ico?1611907141" type="image/x-icon" rel="icon"/><link href="/favicon.ico?1611907141" type="image/x-icon" rel="shortcut icon"/>	<link href="/apple-touch-icon.png?1613111404" rel="apple-touch-icon"/>	<link rel="stylesheet" href="/css/base.css?1611738092"/>	<link rel="stylesheet" href="/css/style.css?1611738092"/>	<link rel="stylesheet" href="/css/font-awesome-all.min.css?1611738092"/>	<link rel="stylesheet" href="/css/common.css?1654593009"/>	<link rel="stylesheet" href="/css/data-attribute.css?1654593009"/>	<link rel="stylesheet" href="/css/navigation.css?1654593009"/>	<script src="/js/jquery-3.5.1.min.js?1611907141"></script>	<script src="/js/bootstrap.min.js?1611907141"></script>	<script src="/js/common.js?1654593009"></script>	<script src="/js/navigation.js?1654593009"></script>		</head>
+
+<script>
+	var Common = new Common("/");
+
+$(document).ready(function() {
+	if (sessionStorage.getItem('controller') != 'TrainingReports') {
+		sessionStorage.removeItem('training_instructor_id');
+		sessionStorage.removeItem('notice_id');
+	}
+	$('.dropdwn-menu').hover(function() {
+		$('.dropdwn-list:not(:animated)').slideDown();
+	}, function() {
+		$('.dropdwn-list').slideUp();
+	});
+	$('.manual-link').on('click', function() {
+		var controller = sessionStorage.getItem('controller');
+		var action = sessionStorage.getItem('action');
+		const url = '/app/open-manual' + '/' + controller + '/' + action;
+		window.open(url, '_blank');
+		return true;
+	});
+});
+</script>
+
+<div class="header-container">
+	<div class="header-info">
+		<div class="notice-link-header">
+			<a class="menu-link" href="/notices">
+				<i class="fa fa-bullhorn"></i><span>お知らせ</span>
+			</a>
+					</div>
+		<div class="notice-subject-header">
+				</div>
+		<div class="manual-header">
+			<a class="manual-link"><img src="/img/manual.svg?1611907141" alt="マニュアル"/></a>
+		</div>
+		<div class="name-header">
+			<div class="dropdwn-menu">
+				<span class="instructor-name">五十嵐順子さん</span>
+				<ul class="dropdwn-list">
+					<li><a href="/mysettings/edit-password">マイページ</a></li>
+					<li><a href="/loginusers/logout">ログアウト</a></li>
+				</ul>
+			</div>
+					</div>
+	</div><!-- .header-info -->
+
+	<div class="header-navigation">
+					<ul class="nav nav-tabs js-tabs">
+				<li class="nav-item text-center ">
+					<a href="#tab1" data-toggle="tab">報告書一覧</a>
+				</li>
+				<li class="nav-item text-center ">
+					<a href="#tab2" data-toggle="tab">登壇案件詳細</a>
+				</li>
+				<li class="nav-item text-center active">
+					<a href="#tab3" data-toggle="tab">講師報告書</a>
+				</li>
+			</ul>
+			</div><!-- .header-navigation -->
+</div><!-- .header-container -->
+
+<div class="tab-content">
+	<div class="tab-pane active clearfix">
+		<link rel="stylesheet" href="/css/custom-form.css?1701332918"/><link rel="stylesheet" href="/css/training-instructor.css?1701332918"/><script src="/js/custom-form.js?1654593009"></script><script src="/js/training-instructor.js?1701332918"></script><script>
+$(function() {
+	$('#save-only').click(function() {
+		var $form = $(this).parents('form:first');
+		$.ajax({
+			type: $form.attr('method'),
+			url:  $form.attr('action'),
+			headers: {
+				'X-CSRF-Token': '0e11fc21874736640b246c7c06ea3f2bf04d74ee1e33d2d2d660b8cebc3fc8f106d4a1bf88f2bba5fd9363422f2e2c313ca2e3eea25df2d95e2fb23658fbc683'
+			},
+			data: $form.serialize(),
+		}).done(function(data) {
+			showNotificationMessage(data);
+		}).fail(function(jqXHR, textStatus) {
+			alert(jqXHR.responseText);
+		});
+	});
+});
+</script>
+
+<div class="modified-datetime-content">
+	<div></div>
+	<div></div>
+</div>
+<div class="training-id-content"><span class="fb id-num">ID:1828151</span></div>
+<div class="online-content"><span class="sign" data-id="1" style="float:right; padding:0; margin:0;"><i class="fa fa-wifi"></i><span>オンライン研修</span></span></div>
+<div class="training-report-content"><span class="sign report-status" data-id="0">未提出</span><span class="attention">提出期限：2024年12月30日</span></div>
+<div class="training-date-content">
+	<span class="training-date-y">2024年</span>
+</div>
+<div class="training-date-content">
+	<span class="training-date-m"><span class="training-date-num">12</span>月</span>
+	<span class="training-date-d"><span class="training-date-num">20</span>日</span>
+	<span class="training-date-w"><span class="training-date-weekday">金</span>曜日</span>
+	<span class="training-time">13:00-17:00</span>
+</div>
+<div class="customer-name-content">
+	<i class="fa fa-sm fa-fw fa-user-tie"></i><span class="fb font-gray" style="margin-left:-0.1em;">郵船コーディアルサービス株式会社</span><a href="http://www.ycsco.com/company/companyinfo.html" class="btn" style="text-indent:0;" target="_blank"><i class="fa fa-globe"></i><span>Web</span></a></div>
+<div class="training-name-content">
+	<i class="fa fa-sm fa-fw fa-chalkboard"></i><span class="fb font-gray" style="margin-left:-0.1em;">マニュアル作成研修（2024年12月開催）</span>
+</div>
+<div class="training-period-content">
+	<i class="fa fa-sm fa-fw fa-calendar-alt"></i><span class="fb font-gray" style="margin-left:-0.1em;">研修期間：2024年12月20日</span>
+</div>
+<div class="salesperson-content">
+	<div class="salesperson-column">
+		<i class="fa fa-chalkboard-teacher"></i><span class="fb font-gray">五十嵐順子</span>
+	</div>
+	<div class="salesperson-column">
+		<i class="fa fa-user-circle"></i><span class="fb font-gray">東京第2営業グループ&nbsp;石田汐音</span>
+	</div>
+</div>
+
+<form method="post" accept-charset="utf-8" action="/training-reports/report/594177"><div style="display:none;"><input type="hidden" name="_method" value="POST"/><input type="hidden" name="_csrfToken" autocomplete="off" value="0e11fc21874736640b246c7c06ea3f2bf04d74ee1e33d2d2d660b8cebc3fc8f106d4a1bf88f2bba5fd9363422f2e2c313ca2e3eea25df2d95e2fb23658fbc683"/></div><input type="hidden" name="training_instructors[training_id]" id="training-instructors-training-id" value="1828151"/><div style="display: flex; justify-content: space-between; position: sticky; top: -1.1vmin; z-index: 9999; background-color: white;"><a href="#" class="scroll-top" style="float: left; margin-top: 1em; margin-bottom: 0.8em;"><i class="fa fa-arrow-alt-circle-up"></i><span>トップへ</span></a><button type="button" id="save-only" name="saveOnly" class="btn-green" style="padding: 0.5em 1em;">提出せずに一時保存</button><a href="#" class="scroll-bottom" style="float: right; margin-top: 1em; margin-bottom: 0.8em;"><i class="fa fa-arrow-alt-circle-down"></i><span>提出へ</span></a></div>
+
+<h2 class="undermarker-red"><i class="fa fa-pencil-alt"></i><span>実施所感</span><span class="subtitle">（この部分はお客様に開示します）</span>
+</h2>
+
+
+<h3>1. 全体<span class="subtitle">（実施形式問わず）</span></h3>
+<fieldset><div class="singleline-select input radio required"><label>1-1.研修内容の理解度</label><input type="hidden" name="student_mastery_option_id" value=""/><div class="selectbox"><input type="radio" name="student_mastery_option_id" value="1" id="student-mastery-option-id-1" required="required"><label for="student-mastery-option-id-1">非常に高い</label></div><div class="selectbox"><input type="radio" name="student_mastery_option_id" value="2" id="student-mastery-option-id-2" required="required"><label for="student-mastery-option-id-2">高い</label></div><div class="selectbox"><input type="radio" name="student_mastery_option_id" value="3" id="student-mastery-option-id-3" required="required"><label for="student-mastery-option-id-3">普通</label></div><div class="selectbox"><input type="radio" name="student_mastery_option_id" value="4" id="student-mastery-option-id-4" required="required"><label for="student-mastery-option-id-4">低い</label></div><div class="selectbox"><input type="radio" name="student_mastery_option_id" value="5" id="student-mastery-option-id-5" required="required"><label for="student-mastery-option-id-5">非常に低い</label></div></div>    <div class="input textarea"><label for="student-mastery-comment">1-2.上記理由について、受講者の発言内容やワークの実践状況など、ご記憶の範囲でお書きください</label><textarea name="student_mastery_comment" class="instructor-report-textarea" id="student-mastery-comment" rows="5"></textarea></div>    <div class="example-wrapper">
+	    <div class="border example-title">⊕ 記入例</div>
+	    <div class="height-large example-entry border" style="display:none;">
+        スキル別研修の場合<br>
+        ・講義の部分では、頷きなども見られ、クレーム対応に関する考え方への理解・納得度は一定数あった。<br>
+        ・グループワークの際には、複数名・複数回「正解が分からない」といった発言などもあり、自身で考え正解を導き出していくということへの苦手意識は実践を通じて払拭していただく必要があります。<br><br>
+
+        階層別研修の場合<br>
+        ・まとめのワークで、「上司からの指示に対して、目的の確認をするようにしたい」「明日から後輩への声掛けを1日最低2回はやっていく」などの発言があり、研修への理解度が高かったように感じました。<br>
+        ・上司への提言という機会は、現場ではそれほど多くないようで、個人ワークでペンが止まっている方が複数名おられました。
+        </div>
+    </div>
+	<div class="singleline-select input radio required"><label>1-3.受講者の積極性</label><input type="hidden" name="student_aggressive_option_id" value=""/><div class="selectbox"><input type="radio" name="student_aggressive_option_id" value="1" id="student-aggressive-option-id-1" required="required"><label for="student-aggressive-option-id-1">非常に良い</label></div><div class="selectbox"><input type="radio" name="student_aggressive_option_id" value="2" id="student-aggressive-option-id-2" required="required"><label for="student-aggressive-option-id-2">良い</label></div><div class="selectbox"><input type="radio" name="student_aggressive_option_id" value="3" id="student-aggressive-option-id-3" required="required"><label for="student-aggressive-option-id-3">普通</label></div><div class="selectbox"><input type="radio" name="student_aggressive_option_id" value="4" id="student-aggressive-option-id-4" required="required"><label for="student-aggressive-option-id-4">悪い</label></div><div class="selectbox"><input type="radio" name="student_aggressive_option_id" value="5" id="student-aggressive-option-id-5" required="required"><label for="student-aggressive-option-id-5">非常に悪い</label></div></div>	<div class="input textarea"><label for="student-aggressive-comment">1-4.上記理由について、受講者の発言内容やワークの実践状況など、ご記憶の範囲でお書きください</label><textarea name="student_aggressive_comment" class="instructor-report-textarea" id="student-aggressive-comment" rows="5"></textarea></div>    <div class="example-wrapper">
+        <div class="border example-title">⊕ 記入例</div>
+        <div class="height-large example-entry border" style="display:none;">
+        スキル別研修の場合<br>
+        ・遅刻者が数名おり、一部の参加者は参加意識が低いように感じました。<br>
+        ・「上司に言われてきた」等の受講者発言から、事前の参加目的の動機づけが弱かったようです。<br>
+        ・クレーム対応に対して、現場で非常に苦慮しておられるようで、休憩時間にも個別で相談や質問をいただきました。<br><br>
+
+        階層別研修の場合<br>
+        ・グループワークや意見交換の時間では、他グループの発表内容もメモしている方が多く、研修に対して積極的に取り組んでいる印象でした。<br>
+        ・ロールプレイングでは、「他グループのメンバーと実践してみたい」との要望が受講者からあり、より現場を意識してスキルを習得しようという姿勢が見られました。
+        </div>
+    </div>
+</fieldset>
+
+<h3>2. 受講者の様子</h3>
+<fieldset><div class="input select required"><label for="student-state-option-id">2-1.次の項目から3～5つお選びください</label><input type="hidden" name="student_state_option_id" value=""/><select name="student_state_option_id[]" multiple="multiple" size="21" required="required" id="student-state-option-id"><option value="1">積極的に手を挙げ、発言する姿勢が見受けられた</option><option value="2">グループワークでお互いから学ぶ姿勢があった</option><option value="3">ワークを通して自分の考えを深めることができていた</option><option value="4">本研修がなぜ大事なのかを意識できていた</option><option value="5">率直に自分の悩みを開示し、助言し合う様子が見られた</option><option value="6">メモをよく取っている姿が多く見られた</option><option value="7">講義を頷きながら聴いている様子が多く見られた</option><option value="8">新しいことを吸収しようとする姿勢があった</option><option value="9">積極的に質問する姿勢があった</option><option value="10">最後まで集中力を切らさずに受講していた</option><option value="12">大変おとなしい方が多かった</option><option value="13">グループワークは誰か１人に頼りがちだった</option><option value="14">自分の考えに固執する様子が見られた</option><option value="15">研修の意図を理解しようとする姿勢に欠けた</option><option value="16">自分の考えや悩みが開示しにくい様子だった</option><option value="17">メモを取ろうとする様子が見られなかった</option><option value="18">全体的に反応が薄かった</option><option value="19">淡々としていながらも、真摯さを感じた</option><option value="20">質問をする方が少なかった</option><option value="21">研修中、集中力の欠ける方がいた</option><option value="11">その他</option></select></div>	<div class="input textarea"><label for="student-state-comment">2-2.優秀だと感じた方の特徴や発言内容の傾向など、研修現場の情報をお書きください。</label><textarea name="student_state_comment" class="instructor-report-textarea" id="student-state-comment" rows="5"></textarea></div>    <div class="example-wrapper">
+        <div class="border example-title">⊕ 記入例</div>
+        <div class="height-large example-entry border" style="display:none;">
+            スキル別研修の場合<br>
+            ・グループAとDでリーダーを務めていただいた方が、発言の少ない方へ上手く質問などをして、グループワークの時間を有効に活用いただいておりました。質問のスキルを皆さんに持っていただくと、クレーム対応が更に向上すると思います。<br>
+            ・現場の人員が足らず、来客の対応が雑になってしまうなどのクレーム発生の背景に関する発言もございました。個々の時間管理や業務効率化に関する課題もあると感じました。<br><br>
+
+            階層別研修の場合<br>
+            ・部長や役員など普段接しない上層部の方と話す機会に質問したいことなどをまとめているなど、視座を高く業務に取り組まれている方がいらっしゃいました。<br>
+            ・「自身が入社した時には、先輩があまり面倒を見てくれなかった」というコメントから、後輩指導に対して、少し後ろ向きな印象を持っているようでした。上司とうまく連携をして、より良い職場を皆さんが作っていくようお伝えしています。<br>
+        </div>
+    </div>
+</fieldset>
+<h3>3. 今後、ご提案できること<span class="subtitle">（対象：受講者）</span></h3>
+<fieldset style="margin-top:0; padding-top:0px;"><div class="input text required"><label for="student-recommend1">3-1.受講者におすすめの研修（研修名または、スキルなど）</label><input type="text" name="student_recommend1" style="margin-bottom: 1px;" required="required" maxlength="255" id="student-recommend1"/></div><input type="text" name="student_recommend2" style="margin-bottom: 1px;"/><input type="text" name="student_recommend3" style="margin-bottom:5px;"/>    <div class="example-wrapper">
+        <div class="border example-title">⊕ 記入例</div>
+        <div class="height-large example-entry border" style="display:none;">
+        スキル別研修の場合<br>
+        研修1：アサーションなどコミュニケーション関連<br>
+        研修2：タイムマネジメントなどの業務改善に関するスキル<br>
+        研修3：（上司向け）クレーム対応<br><br>
+
+        階層別研修の場合<br>
+        研修1：OJTやティーチング等育成に関するスキル<br>
+        研修2：ロジカルシンキングなど考えを整理するスキル
+        </div>
+    </div>
+    <div class="input textarea"><label for="student-recommend-comment">3-2.おすすめの理由をお書きください</label><textarea name="student_recommend_comment" class="instructor-report-textarea" id="student-recommend-comment" rows="5"></textarea></div>    <div class="example-wrapper">
+        <div class="border example-title">⊕ 記入例</div>
+        <div class="height-large example-entry border" style="display:none;">
+        スキル別研修の場合<br>
+        研修１・２：２．受講者の様子に記載の通り<br>
+        研修３：上司に設けて欲しい等のコメントがあったため<br><br>
+        階層別研修の場合<br>
+        研修１：育成に関するスキルは改めて体系的に学んでいただいた方が良いかと感じました。<br>
+        研修２：上司や後輩へ説明する際に、苦手意識があるようなので、整理するスキルをおすすめします。<br>
+        </div>
+    </div>
+</fieldset>
+
+<h2 class="undermarker-blue"><i class="fa fa-pencil-alt"></i><span>弊社への連絡事項</span><span class="subtitle">（この部分はお客様に開示しません）</span></h2>
+
+<h3>4. 全体<span class="subtitle">～進行に関すること</span></h3>
+<fieldset style="margin-top:0;"><span style="display: inline-block; margin-bottom:1em; font-size:0.95em; font-weight:bold; text-decoration:underline;">● 内容について（レベル・企画・テキスト・ワーク・量 など）</span><div class="singleline-select input radio required"><label>4-1-1.レベル感</label><input type="hidden" name="content_level_option_id" value=""/><div class="selectbox"><input type="radio" name="content_level_option_id" value="1" id="content-level-option-id-1" required="required"><label for="content-level-option-id-1">高過ぎた</label></div><div class="selectbox"><input type="radio" name="content_level_option_id" value="2" id="content-level-option-id-2" required="required"><label for="content-level-option-id-2">ちょうど良かった</label></div><div class="selectbox"><input type="radio" name="content_level_option_id" value="3" id="content-level-option-id-3" required="required"><label for="content-level-option-id-3">低過ぎた</label></div></div><div class="singleline-select input radio required"><label>4-1-2.企画内容</label><input type="hidden" name="content_plan_option_id" value=""/><div class="selectbox"><input type="radio" name="content_plan_option_id" value="1" id="content-plan-option-id-1" required="required"><label for="content-plan-option-id-1">課題と合致していた</label></div><div class="selectbox"><input type="radio" name="content_plan_option_id" value="2" id="content-plan-option-id-2" required="required"><label for="content-plan-option-id-2">課題と合致していない部分があった</label></div></div><div class="singleline-select input radio required"><label>4-1-3.ワークの量</label><input type="hidden" name="work_volume_option_id" value=""/><div class="selectbox"><input type="radio" name="work_volume_option_id" value="1" id="work-volume-option-id-1" required="required"><label for="work-volume-option-id-1">多過ぎた</label></div><div class="selectbox"><input type="radio" name="work_volume_option_id" value="2" id="work-volume-option-id-2" required="required"><label for="work-volume-option-id-2">ちょうど良かった</label></div><div class="selectbox"><input type="radio" name="work_volume_option_id" value="3" id="work-volume-option-id-3" required="required"><label for="work-volume-option-id-3">少な過ぎた</label></div><div class="selectbox"><input type="radio" name="work_volume_option_id" value="4" id="work-volume-option-id-4" required="required"><label for="work-volume-option-id-4">ワークなし</label></div></div><div class="singleline-select input radio required"><label>4-1-4.ワークで内容の理解が深まったか</label><input type="hidden" name="work_mastery_option_id" value=""/><div class="selectbox"><input type="radio" name="work_mastery_option_id" value="1" id="work-mastery-option-id-1" required="required"><label for="work-mastery-option-id-1">深まったと感じた</label></div><div class="selectbox"><input type="radio" name="work_mastery_option_id" value="2" id="work-mastery-option-id-2" required="required"><label for="work-mastery-option-id-2">深まったと感じなかった</label></div><div class="selectbox"><input type="radio" name="work_mastery_option_id" value="3" id="work-mastery-option-id-3" required="required"><label for="work-mastery-option-id-3">ワークなし</label></div></div><div class="input textarea"><label for="progress-difficult-comment">4-2.理解が深まらなかったワークや、進行しにくいと感じた点について具体的にお書きください</label><textarea name="progress_difficult_comment" id="progress-difficult-comment" rows="5"></textarea></div></fieldset>
+<fieldset style="margin-top:0;"><span style="display:inline-block; margin-bottom:1em; font-size:0.95em; font-weight:bold; text-decoration:underline;">● オンライン研修について</span><div class="singleline-select input radio required"><label>4-3-1.インターネットの接続不調・不具合 ～ 講師側</label><input type="hidden" name="online_trouble_instructor_option_id" value=""/><div class="selectbox"><input type="radio" name="online_trouble_instructor_option_id" value="1" id="online-trouble-instructor-option-id-1" required="required"><label for="online-trouble-instructor-option-id-1">問題なかった</label></div><div class="selectbox"><input type="radio" name="online_trouble_instructor_option_id" value="2" id="online-trouble-instructor-option-id-2" required="required"><label for="online-trouble-instructor-option-id-2">一時的に発生したが進行に大きな影響はなかった</label></div><div class="selectbox"><input type="radio" name="online_trouble_instructor_option_id" value="3" id="online-trouble-instructor-option-id-3" required="required"><label for="online-trouble-instructor-option-id-3">進行に大きな支障が出た</label></div><div class="selectbox"><input type="radio" name="online_trouble_instructor_option_id" value="4" id="online-trouble-instructor-option-id-4" required="required"><label for="online-trouble-instructor-option-id-4">オンライン研修ではなかった</label></div></div><div class="singleline-select input radio required"><label>4-3-2.インターネットの接続不調・不具合 ～ 受講者側</label><input type="hidden" name="online_trouble_student_option_id" value=""/><div class="selectbox"><input type="radio" name="online_trouble_student_option_id" value="1" id="online-trouble-student-option-id-1" required="required"><label for="online-trouble-student-option-id-1">問題なかった</label></div><div class="selectbox"><input type="radio" name="online_trouble_student_option_id" value="2" id="online-trouble-student-option-id-2" required="required"><label for="online-trouble-student-option-id-2">一部の受講者に発生した</label></div><div class="selectbox"><input type="radio" name="online_trouble_student_option_id" value="3" id="online-trouble-student-option-id-3" required="required"><label for="online-trouble-student-option-id-3">半数以上発生し、進行に支障が出た</label></div><div class="selectbox"><input type="radio" name="online_trouble_student_option_id" value="4" id="online-trouble-student-option-id-4" required="required"><label for="online-trouble-student-option-id-4">オンライン研修ではなかった</label></div></div><div class="input textarea"><label for="online-trouble-comment">4-3-3.ログイン出来なかった等、わかる範囲で状況をお書きください</label><textarea name="online_trouble_comment" id="online-trouble-comment" rows="5"></textarea></div><div class="input textarea"><label for="online-shortage-comment">4-3-4.準備物で不足した情報や資料等、わかる範囲でお書きください</label><textarea name="online_shortage_comment" id="online-shortage-comment" rows="5"></textarea></div></fieldset>
+
+<h3>5. 営業担当者に対して</h3>
+<fieldset><div class="input textarea"><label for="work-takein-comment">5-1.テキストの内容以外で取り入れたワークや事例を具体的にお書きください</label><textarea name="work_takein_comment" id="work-takein-comment" rows="5"></textarea></div><div class="input textarea"><label for="student-special-state-comment">5-2.受講者の様子から考えられる組織や受講者の課題についてお書きください。</label><textarea name="student_special_state_comment" class="instructor-report-textarea" id="student-special-state-comment" rows="5"></textarea></div><div class="example-wrapper">
+    <div class="border example-title">⊕ 記入例</div>
+    <div class="height-large example-entry border" style="display:none;">
+    スキル別研修の場合<br>
+    ・受講者間で、クレーム対応に関して経験の差が大きく、グループワークは有効であったと思います。一方で、日常から施設間でクレームに関する情報共有をする機会が少ないように感じました<br>
+    ・主任は現場責任者クラスと伺っておりましたが、受講者の一部からは「クレームは面倒」という発言もあり、責任感という面では、階層に関する役割理解が足りていないように感じました<br><br>
+
+    階層別研修の場合<br>
+    ・受講者様から「ITの会社ではあるが、ビジネススキル習得の研修実施、目標を設定し上司と共有する等、非常にしっかりしている会社だと思う」といった発言がありました。ご担当者様も、希望されて研修担当になっているようでしたので、今後も研修を拡充される意向をお持ちのようでした。
+    </div>
+</div>
+<div class="input textarea required"><label for="customer-followup-comment">5-3.お客さまへのフォローや今後のアプローチについて</label><textarea name="customer_followup_comment" style="margin-bottom: 0.2em;" required="required" id="customer-followup-comment" rows="5"></textarea></div><p style="font-size: 0.78em;" class="instructor-report-textarea">【お願い】次回に繋げるために、受講者や当日の状況など、情報提供をお願いいたします。</p><div class="example-wrapper">
+    <div class="border example-title">⊕ 記入例</div>
+    <div class="height-large example-entry border" style="display:none;">
+    スキル別研修の場合<br>
+    ご担当者様としては、CS向上に関して課題意識をお持ちのようです。クレームの未然防止に向けて、今後ご提案してみてはいかがでしょうか。<br><br>
+
+    階層別研修の場合<br>
+    ・一部の受講者からは、「上司がとりあえず何でもやろうの精神で、目的や意図が分からず担当している業務がある」と言ったコメントがありました。上司向けに説明に関するスキルアップの機会も必要であると感じました。<br>
+    ・ご担当者様が「経営層から部長研修もやるように指示が出ている」とおっしゃっていました。
+    </div>
+</div>
+</fieldset>
+
+<h3>6. お客様にご提案できること<span class="subtitle">（対象：受講者の上司または部下）</span></h3>
+<fieldset style="margin-top:0; padding-top:0px;"><div class="input text"><label for="member-recommend1">6-1.受講者の上司や部下におすすめの研修（研修名または、スキルなど）</label><input type="text" name="member_recommend1" style="margin-bottom: 1px;" maxlength="255" id="member-recommend1"/></div><input type="text" name="member_recommend2" style="margin-bottom: 1px;"/><input type="text" name="member_recommend3" style="margin-bottom:5px;"/>    <div class="example-wrapper">
+        <div class="border example-title">⊕ 記入例</div>
+        <div class="height-large example-entry border" style="display:none;">
+        スキル別研修の場合<br>
+        研修1：（上司向け）クレーム対応<br>
+        研修2：組織のタイムマネジメント<br>
+        研修3：労務管理<br><br>
+
+        階層別研修の場合<br>
+        研修1：OJTやコーチング等育成に関するスキル<br>
+        研修2：説明力
+        </div>
+    </div>
+    <div class="input textarea"><label for="member-recommend-comment">6-2.おすすめの理由をお書きください</label><textarea name="member_recommend_comment" class="instructor-report-textarea" id="member-recommend-comment" rows="5"></textarea></div>    <div class="example-wrapper">
+        <div class="border example-title" style="margin:0; text-align:left; background-color:#FFF3F3; cursor:pointer">⊕ 記入例</div>
+        <div class="height-large example-entry border" style="display:none;">
+        スキル別研修の場合<br>
+        ２．受講者の様子に記載の通り<br><br>
+
+        階層別研修の場合<br>
+        研修１：上司に関しても、育成に関する意識付けが必要です<br>
+        研修２：部下への説明について課題があるようです
+        </div>
+    </div>
+</fieldset>
+
+<hr>
+
+<p style="padding: 1rem;">報告書の作成は、以上でございます。<br />
+記入内容をご確認後、<span class='font-marker'>「保存して提出する」</span>ボタンを押してください。<br />
+このたびは、ご登壇および事後報告にご協力いただき、誠にありがとうございました。</p>
+<div style="text-align: center;"><button type="submit" name="saveConfirm" class="btn-blue">保存して提出する</button></div>
+
+<div style="display:none;"><input type="hidden" name="_Token[fields]" autocomplete="off" value="db376f79f35e0d484606d8fcdd5be62ff7b54343%3Atraining_instructors.training_id"/><input type="hidden" name="_Token[unlocked]" autocomplete="off" value="saveConfirm%7CsaveOnly"/></div></form>
+<script>
+$(document).ready(function() {
+	document.title = '報告書：マニュアル作成研修（2024年12月開催）（2024/12/20）';
+	sessionStorage.setItem('controller', 'TrainingReports');
+	sessionStorage.setItem('action', 'report');
+	sessionStorage.setItem('training_instructor_id', 594177);
+});
+</script>
+	</div>
+</div><!-- .tab-content -->
+
+<div class="footer-navigation">
+	<ul class="menubar">
+		<li class="">
+			<a  class="menu-link" href="/training-instructors"><img src="/img/training-schedule-inactive.svg?1611907141" alt=""/><img src="/img/training-schedule-active.svg?1611907141" alt=""/><div>登壇案件</div></a>
+		</li>
+		<li class="nav-active">
+			<a class="menu-link" href="/training-reports"><img src="/img/training-report-inactive.svg?1654593009" alt=""/><img src="/img/training-report-active.svg?1654593009" alt=""/><div>報告書</div><div class="training-report-badge">
+						<span>1</span>
+					</div></a>
+		</li>
+		<li class="">
+			<a class="menu-link" href="/mysettings/edit-password"><img src="/img/mypage-inactive.svg?1611907141" alt=""/><img src="/img/mypage-active.svg?1611907141" alt=""/><div>マイページ</div></a>
+		</li>
+	</ul>
+</div><!-- .footer-navigation -->
+
+</html>
